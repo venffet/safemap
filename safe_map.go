@@ -76,7 +76,7 @@ func (m *SafeMap) Count() int {
 	return len(m.bm)
 }
 
-// Swap swaps the underlying map
+// Swap replaces the underlying map
 func (m *SafeMap) Swap(bm map[interface{}]interface{}) {
 	m.lock.Lock()
 	m.lock.Unlock()
